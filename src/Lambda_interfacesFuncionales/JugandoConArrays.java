@@ -1,13 +1,17 @@
 package Lambda_interfacesFuncionales;
 
+import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
+import java.util.function.BiPredicate;
 import java.util.function.BinaryOperator;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
+import java.util.function.UnaryOperator;
 
 public class JugandoConArrays {
 
@@ -176,6 +180,24 @@ public class JugandoConArrays {
 			 System.out.printf("%d ",num);
 		 }
 		 
+		 
+		 /* simplificar expresiones lambdas*/
+		 /* 01 */ Function <Integer,Integer> function = s -> s + 1;
+		 /* 02 */ BiFunction<Integer,Integer,Integer> bifunction = (x,y) -> x + y;
+		 /* 03 */ Runnable runable = () -> System.out.println("Hola Mundo");
+		 /* 04 */ Predicate<String> predicate = s -> s.isEmpty();
+		 /* 05 */ UnaryOperator<Double> unaryOperator = d -> d * 2.0; 
+		 /* 06 */ BiConsumer<Integer,Integer> biConsumer = (a,b) ->System.out.println(a - b);
+		 /* 07 */ BiPredicate<String,String> biPredicate = (s1,s2) -> s1.equals(s2);
+		 /* 08 */ Supplier<Integer> supplier = () -> 42;
+		 /* 09 */ Function<List<String>,Integer> function2 = list ->list.size();
+		 /* 10 */ Predicate<Map<String,Integer>> predicate2 = map -> map.isEmpty();
+		 /* 11 */ Predicate<Character> predicate3 = c -> Character.isDigit(c); 
+		 /* 12 */ Function<String,String> function3 = str -> str.toUpperCase();
+		 /* 13 */ UnaryOperator<String> unaryOperator2 = str-> new StringBuilder(str).reverse().toString();
+		 /* 14 */ Predicate<Boolean> predicate4 = b -> !b; 
+		 /* 15 */ BiFunction<String,Integer,String> bifunction2 = (String s, Integer n) -> s.substring(0, n); 
+		 /* 16 */ BiFunction<Integer,Double,Double> biFunction3 = (Integer n, Double d) ->Math.pow(n, d);
 		 
 	}
 }
